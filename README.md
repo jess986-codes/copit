@@ -81,5 +81,5 @@ o Garnier Fructis Shampoo or Conditioner 850mL
 
 Total Cost: $18.75
 ```
-You can paste this list into your notes, send this to someone through your instant messager or send it through using your good 'ol email.
->👉 **_NOTE:_** The shopping list buttons do not work yet, except for the copy function. Another way of removing the items is to click on selected product again 🙂
+You can paste this list into your notes, send this to someone through your instant messager or send it through via email.
+>👉 **_NOTE:_** The shopping list buttons do not work yet, except for the copy function. Another way of removing the items is to click on the selected product again 🙂
