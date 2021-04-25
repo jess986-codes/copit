@@ -1,5 +1,5 @@
 # Copit
-=== Created in 2020 ===
+=== Created in 2020 ===\
 In response to Covid-19 one-person-rule, made it easier to turn selected groceries into a shopping list, which can be readily copied to your nominated shopper. 
 
 In the absence of a Coles API, I created a web-scrapping program using Puppeteer. This was used to extract the weekly specials into a MySQL database.
