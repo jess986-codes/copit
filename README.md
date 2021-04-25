@@ -6,6 +6,34 @@ In the absence of a Coles API, I created a web-scrapping program using Puppeteer
 
 The focus of this site was not to make it look good, but to understand the backend processing and giving the site functionality. It was something I wanted to make quickly in order to achieve the goal of collecting a list of supermarket specials. To this day, I still use it and even though I haven't yet implemented everything or sorted the products categorically, it's a joy to use knowing that I made this all from scratch.
 
+## How to setup
+1. Ensure MySql is installed on your device. Instructions on how to are here: https://dev.mysql.com/doc/refman/8.0/en/installing.html
+2. In installing MySql, you will be asked to create a password for your root user. In config/default.json and webscrapper/config/default.json - put your password where it says "REPLACE-WITH-YOUR-OWN-PASSWORD".
+3. Set up the "products" database
+start mySql server (you will be prompted for the password you made previously):
+```
+mysql -u root -p
+```
+create a database:
+```
+CREATE DATABASE coles;
+```
+select "coles" database for use:
+```
+USE coles;
+```
+create a "products" table to store all our product information:
+```
+CREATE TABLE IF NOT EXISTS products (
+prodID INT(9) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(256) UNIQUE NOT NULL,
+price DECIMAL(5,2),
+unit VARCHAR(4),
+image VARCHAR(8000) NOT NULL,
+special TINYINT(1) NOT NULL DEFAULT 0
+);
+```
+
 ## How it should look
 ![Screen Shot 2021-04-25 at 1 07 20 pm](https://user-images.githubusercontent.com/57920696/115982154-370e3c00-a5dc-11eb-8d64-2e4d5c069ee9.png)
 
