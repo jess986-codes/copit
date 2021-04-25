@@ -44,9 +44,9 @@ async function getSpecials() {
     // click load until all products are displayed
     while (loads > 0) {
       loads -= 1;
-      await page.waitFor(1000);
+      await page.waitForTimeout(1000);
       await page.click('#show-more');
-      await page.waitFor(1000);
+      await page.waitForTimeout(1000);
     }
 
     await page.screenshot({path: location, fullPage: true});
