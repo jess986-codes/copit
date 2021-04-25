@@ -7,9 +7,18 @@ In the absence of a Coles API, I created a web-scrapping program using Puppeteer
 The focus of this site was not to make it look good, but to understand the backend processing and giving the site functionality. It was something I wanted to make quickly in order to achieve the goal of collecting a list of supermarket specials. To this day, I still use it and even though I haven't yet implemented everything or sorted the products categorically, it's a joy to use knowing that I made this all from scratch.
 
 ## How to setup
-1. Ensure MySql is installed on your device. Instructions on how to are here: https://dev.mysql.com/doc/refman/8.0/en/installing.html
-2. In installing MySql, you will be asked to create a password for your root user. In config/default.json and webscrapper/config/default.json - put your password where it says "REPLACE-WITH-YOUR-OWN-PASSWORD".
-3. Set up the "products" database
+1. Node.js installed through one of the following:
+```
+a) download for your OS here: https://nodejs.org/en/download/
+b) using homebrew on Linux: brew install node
+```
+2. Ensure the path to Node.js is in your PATH environment variables under user and system variables.\
+Instructions here: https://love2dev.com/blog/node-is-not-recognized-as-an-internal-or-external-command/
+3. In command line, navigate to the directory where app.js is and input the following:```npm install```
+4. Then navigate to the webscrapper folder and input the following again:```npm install```
+5. Ensure MySql is installed on your device. Instructions on how to are here: https://dev.mysql.com/doc/refman/8.0/en/installing.html
+6. In installing MySql, you will be asked to create a password for your root user. In config/default.json and webscrapper/config/default.json - place that same password where it says "REPLACE-WITH-YOUR-OWN-PASSWORD".
+7. Set up the "products" database
 start mySql server (you will be prompted for the password you made previously):
 ```
 mysql -u root -p
@@ -33,7 +42,6 @@ image VARCHAR(8000) NOT NULL,
 special TINYINT(1) NOT NULL DEFAULT 0
 );
 ```
-
 ## How it should look
 ![Screen Shot 2021-04-25 at 1 07 20 pm](https://user-images.githubusercontent.com/57920696/115982154-370e3c00-a5dc-11eb-8d64-2e4d5c069ee9.png)
 
