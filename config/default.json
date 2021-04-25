@@ -1,0 +1,10 @@
+{
+    "Products": {
+        "dbConfig": {
+            "host": "localhost",
+            "user": "root",
+            "password": "REPLACE-WITH-YOUR-PASSWORD",
+            "database": "coles"
+        }   
+    }
+}
