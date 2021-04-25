@@ -18,10 +18,18 @@ Instructions here: https://love2dev.com/blog/node-is-not-recognized-as-an-intern
 4. Then navigate to the webscrapper folder and input the following again:```npm install```
 5. Ensure MySql is installed on your device. Instructions on how to are here: https://dev.mysql.com/doc/refman/8.0/en/installing.html
 6. In installing MySql, you will be asked to create a password for your root user. In config/default.json and webscrapper/config/default.json - place that same password where it says "REPLACE-WITH-YOUR-OWN-PASSWORD".
-7. Set up the "products" database
+8. Set up the "products" database
 start mySql server (you will be prompted for the password you made previously):
 ```
 mysql -u root -p
+```
+change mySql authentication method:
+```
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'your-root-user-password'
+
+```
+```
+flush privileges;
 ```
 create a database:
 ```
@@ -42,6 +50,23 @@ image VARCHAR(8000) NOT NULL,
 special TINYINT(1) NOT NULL DEFAULT 0
 );
 ```
+## Time to run
+1. The first thing you MUST do is navigating to the webscrapper folder and run the webscrapping program :
+```
+node webscrapper.js
+```
+>👉 **_NOTE:_** When the new specials come out (Wednesday), run the webscrapping program again to update the "products" table.
+
+2.  navigate back to where app.js is and run it:
+```
+node app.js
+```
+3. In a browser window, paste the following in the URL bar:
+
+```
+http://localhost:3000/
+```
+
 ## How it should look
 ![Screen Shot 2021-04-25 at 1 07 20 pm](https://user-images.githubusercontent.com/57920696/115982154-370e3c00-a5dc-11eb-8d64-2e4d5c069ee9.png)
 
