@@ -18,7 +18,7 @@ Instructions here: https://love2dev.com/blog/node-is-not-recognized-as-an-intern
 4. Then navigate to the webscrapper folder and input the following again:```npm install```
 5. Ensure MySql is installed on your device. Instructions on how to are here: https://dev.mysql.com/doc/refman/8.0/en/installing.html
 6. In installing MySql, you will be asked to create a password for your root user. In config/default.json and webscrapper/config/default.json - place that same password where it says "REPLACE-WITH-YOUR-OWN-PASSWORD".
-8. Set up the "products" database
+8. Set up the "products" database\
 start mySql server (you will be prompted for the password you made previously):
 ```
 mysql -u root -p
