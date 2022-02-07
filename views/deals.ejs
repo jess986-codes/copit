@@ -1,63 +1,109 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" type="image/svg" href="images/money.svg">
-    <script src="https://use.fontawesome.com/releases/v5.14.0/js/all.js" data-auto-replace-svg="nest"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" type="image/svg" href="images/money.svg" />
+    <script
+      src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"
+      data-auto-replace-svg="nest"
+    ></script>
 
-    <title>Cop-it</title>    
+    <title>Cop-it</title>
   </head>
   <body>
     <nav class="navbar navbar-dark">
-        <a class="navbar-brand" href="#">Cop-it</a>
-        <div class="shopping-list">
-            <a class="list-icon"><i class="fas fa-tasks fa-2x"></i></a>
-        </div>
+      <a class="navbar-brand" href="#">Cop-it</a>
+      <div class="shopping-list">
+        <a class="list-icon"><i class="fas fa-tasks fa-2x"></i></a>
+      </div>
     </nav>
     <div class="shopping-list-dropdown">
-        <h2>Shopping List</h2>
-        <div class="list">
+      <h2>Shopping List</h2>
+      <div class="list"></div>
+      <div class="shopping-list-bottom">
+        <div class="total-cost">Total Cost: $0.00</div>
+        <button class="btn btn-primary copy">Copy</button>
+      </div>
+    </div>
 
-        </div>
-        <div class="shopping-list-bottom">
-            <div class="total-cost">Total Cost: $0.00</div>
-            <button class="btn btn-primary copy">Copy</button>
-        </div>    
-    </div>
-    
-    <div id="extra-info">
-    </div>
+    <div id="extra-info"></div>
 
     <div class="container">
-        <div class="cat-menu">
-            <div class="menu-item selected-category"><img class="menu-icon" src="images/menu-icons/half-price.svg"><span class="category">Half-price</span></div>
-            <div class="menu-item"><img class="menu-icon" src="images/menu-icons/chocolate-bar.svg"><span class="category">Snacks</span></div>
-            <div class="menu-item"><img class="menu-icon" src="images/menu-icons/packaging.png"><span class="category">Dairy</span></div>
-            <div class="menu-item"><img class="menu-icon" src="images/menu-icons/snowflake.png"><span class="category">Frozen</span></div>
-            <div class="menu-item"><img class="menu-icon" src="images/menu-icons/bread-silhouette-side-view.svg"><span class="category">Bread</span></div>
+      <div class="cat-menu">
+        <div class="menu-item selected-category">
+          <img class="menu-icon" src="images/menu-icons/half-price.svg" /><span
+            class="category"
+            >Half-price</span
+          >
         </div>
-
-        <script>
-            var queriedInfo = <%- JSON.stringify(info) %>;
-        </script>
-
-        <div class="product-list">
+        <div class="menu-item">
+          <img
+            class="menu-icon"
+            src="images/menu-icons/chocolate-bar.svg"
+          /><span class="category">Snacks</span>
         </div>
+        <div class="menu-item">
+          <img class="menu-icon" src="images/menu-icons/packaging.png" /><span
+            class="category"
+            >Dairy</span
+          >
+        </div>
+        <div class="menu-item">
+          <img class="menu-icon" src="images/menu-icons/snowflake.png" /><span
+            class="category"
+            >Frozen</span
+          >
+        </div>
+        <div class="menu-item">
+          <img
+            class="menu-icon"
+            src="images/menu-icons/bread-silhouette-side-view.svg"
+          /><span class="category">Bread</span>
+        </div>
+      </div>
 
+      <script>
+        var queriedInfo = <%- JSON.stringify(info) %>;
+      </script>
+
+      <div class="product-list"></div>
     </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="index_copy.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
   </body>
 </html>
